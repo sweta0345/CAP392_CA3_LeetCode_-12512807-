@@ -1,4 +1,4 @@
-class LC1295_EvenNumberOfDigits {
+class Solution {
     public int findNumbers(int[] nums) {
 
         int count = 0;
@@ -7,10 +7,10 @@ class LC1295_EvenNumberOfDigits {
 
             int digits = 0;
 
-            do {
+            while (num > 0) {
                 digits++;
                 num = num / 10;
-            } while (num != 0);
+            }
 
             if (digits % 2 == 0) {
                 count++;
