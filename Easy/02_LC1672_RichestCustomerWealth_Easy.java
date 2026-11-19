@@ -1,19 +1,19 @@
-class LC1672_RichestCustomerWealth {
+class Solution {
     public int maximumWealth(int[][] accounts) {
 
-        int richest = 0;
+        int maxWealth = 0;
 
-        for (int[] customer : accounts) {
+        for (int i = 0; i < accounts.length; i++) {
 
-            int wealth = 0;
+            int sum = 0;
 
-            for (int money : customer) {
-                wealth = wealth + money;
+            for (int j = 0; j < accounts[i].length; j++) {
+                sum += accounts[i][j];
             }
 
-            richest = Math.max(richest, wealth);
+            maxWealth = Math.max(maxWealth, sum);
         }
 
-        return richest;
+        return maxWealth;
     }
 }
